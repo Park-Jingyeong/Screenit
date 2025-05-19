@@ -8,6 +8,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>{children}</body>
+      {/* Header 컴포넌트 넣기 */}
     </html>
   );
 }
