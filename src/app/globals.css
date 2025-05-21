@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+/* @font-face {
+  font-family: "pretendard";
+  src: url(../../public/fonts/PretendardVariable.woff2);
+} */
+
+@theme {
+  --font-pretendard: var(--font-pretendard);
+  --color-main-blue: #061bb0;
+}

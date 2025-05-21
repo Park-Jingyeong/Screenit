@@ -6,6 +6,21 @@ const config: Config = {
     "./src/components/**/*.{js.ts,jsx,tsx}",
   ],
   theme: {
+
+    extend: {
+      // fontFamily: {
+      //   pretendard: ["var(--font-pretendard)"],
+      // },
+      // container: {
+      //   center: true,
+      //   padding: "1rem",
+      //   screens: {
+      //     sm: "640px",
+      //     md: "768px",
+      //     lg: "1200px",
+      //   },
+      // },
+    },
     container: {
       center: true,
       padding: "1rem",

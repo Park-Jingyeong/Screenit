@@ -1,4 +1,12 @@
 import "./globals.css";
+import Header from "@/components/header";
+import localFont from "next/font/local";
+
+const pretendard = localFont({
+  src: "../../public/fonts/PretendardVariable.woff2",
+  display: "swap",
+  variable: "--font-pretendard",
+});
 
 export default function RootLayout({
   children,
@@ -6,9 +14,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
-      <body>{children}</body>
-      {/* Header 컴포넌트 넣기 */}
+    <html lang="ko" className={`h-full ${pretendard.variable}`}>
+      <body className="font-pretendard">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
