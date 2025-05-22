@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={`h-full ${pretendard.variable}`}>
-      <body className="font-pretendard">
+      <body className="font-pretendard box-border">
         <Header />
         {children}
       </body>
