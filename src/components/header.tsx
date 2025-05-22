@@ -35,14 +35,16 @@ export default function Header() {
         </div>
 
         <div className="ml-auto flex mr-3 md:mr-4">
-          <button>
+          <Link href={"/search"}>
             <Image src={search} alt={"search"} />
-          </button>
+          </Link>
         </div>
 
         <div className="font-semibold text-xl flex gap-3 md:gap-4">
-          <button className="cursor-pointer">Login</button>
-          <button className="text-main-blue cursor-pointer">Join</button>
+          <Link href={"/login"}>Login</Link>
+          <Link href={"/join"} className="text-main-blue cursor-pointer">
+            Join
+          </Link>
         </div>
       </div>
     </header>
