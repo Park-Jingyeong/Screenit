@@ -3,11 +3,17 @@ import Link from "next/link";
 import Image from "next/image";
 import logo_header from "@/../public/logo_header.svg";
 import { useMediaQuery } from "react-responsive";
+import { useEffect, useState } from "react";
 import search from "@/../public/search.svg";
 
 // @TODO - Header 위치 고정 적용
 export default function Header() {
-  const overMd = useMediaQuery({ minWidth: 768 });
+  const isPC = useMediaQuery({ minWidth: 768 });
+  const [pc, setPc] = useState<boolean>(false);
+
+  useEffect(() => {
+    setPc(isPC);
+  }, [isPC]);
 
   return (
     <header className="px-8 border-[1px] border-main-blue/15">
@@ -15,8 +21,8 @@ export default function Header() {
         <Link href={"/"}>
           <Image src={logo_header} alt="screenit" />
         </Link>
-
-        {overMd ? (
+        {/* 조건부 렌더링 */}
+        {pc ? (
           <div className="w-full flex justify-between">
             <div className="ml-8">
               <ul className="font-semibold text-xl flex gap-6 whitespace-nowrap">
