@@ -17,13 +17,13 @@ export default function Header() {
 
   return (
     <header className="px-8 border-[1px] border-main-blue/15">
-      <div className="mx-auto max-w-[1200px] h-[70px] flex items-center">
+      <div className="mx-auto max-w-[1200px] h-[60px] flex items-center">
         <Link href={"/"}>
           <Image src={logo_header} alt="screenit" />
         </Link>
         {/* 조건부 렌더링 */}
         {pc ? (
-          <div className="w-full flex justify-between">
+          <div className="w-full flex justify-between items-center">
             <div className="ml-8">
               <ul className="font-semibold text-xl flex gap-6 whitespace-nowrap">
                 <li>
@@ -40,7 +40,7 @@ export default function Header() {
             <div className="flex items-center">
               <div className="md:mr-4">
                 <Link href={"/search"}>
-                  <Image src={search} alt={"search"} />
+                  <Image src={search} alt={"search"} width={28}/>
                 </Link>
               </div>
               <div className="font-semibold text-xl flex gap-4">
