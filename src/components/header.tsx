@@ -40,12 +40,12 @@ export default function Header() {
             <div className="flex items-center">
               <div className="md:mr-4">
                 <Link href={"/search"}>
-                  <Image src={search} alt={"search"} width={28}/>
+                  <Image src={search} alt={"search"} width={28} />
                 </Link>
               </div>
               <div className="font-semibold text-xl flex gap-4">
                 <Link href={"/login"}>Login</Link>
-                <Link href={"/join"} className="text-main-blue cursor-pointer">
+                <Link href={"/join"} className="cursor-pointer">
                   Join
                 </Link>
               </div>
