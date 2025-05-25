@@ -16,7 +16,7 @@ export default function Header() {
   }, [isPC]);
 
   return (
-    <header className="px-8 border-[1px] border-main-blue/15">
+    <header className="px-8 border-[1px] border-main-blue/15 bg-main-blue/10">
       <div className="mx-auto max-w-[1200px] h-[60px] flex items-center">
         <Link href={"/"}>
           <Image src={logo_header} alt="screenit" />
