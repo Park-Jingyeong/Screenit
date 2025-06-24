@@ -2,6 +2,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import localFont from "next/font/local";
+import ReactQueryProvider from "@/utils/provider";
 
 const pretendard = localFont({
   src: "../../public/fonts/PretendardVariable.woff2",
@@ -17,11 +18,13 @@ export default function RootLayout({
   return (
     <html lang="ko" className={`h-full ${pretendard.variable}`}>
       <body className="font-pretendard box-border h-full">
-        <div className="pb-[60px] h-auto min-h-full">
-          <Header />
-          {children}
-        </div>
-        <Footer />
+        <ReactQueryProvider>
+          <div className="pb-[60px] h-auto min-h-full">
+            <Header />
+            {children}
+          </div>
+          <Footer />
+        </ReactQueryProvider>
       </body>
     </html>
   );
