@@ -8,6 +8,7 @@ import movie from "@/../public/movie.svg";
 import tv from "@/../public/tv.svg";
 import search from "@/../public/search.svg";
 import profile from "@/../public/profile.svg";
+
 export default function Footer() {
   const isPC = useMediaQuery({ minWidth: 768 });
   const [pc, setPc] = useState<boolean>(false);
